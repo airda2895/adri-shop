@@ -1,0 +1,9 @@
+<img class="card-img-top" src="{{pc.picture}}" alt="{{pc.title}}">
+<div class="card-body">
+    <h5 class="card-title">{{pc.title}}</h5>
+    <p class="card-text">{{pc.description}}</p>
+    <p class="card-text">{{pc.price}}€</p>
+    <button type="button" class="btn btn-primary"
+    [disabled]="isDisabled()"
+    (click)="comprar()">{{compra}}</button>
+</div>

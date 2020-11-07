@@ -1,0 +1,19 @@
+<!-- Contenedor principal -->
+<main role="main" class="container">
+    <div class="starter-template">
+        <h1>Stateful</h1>
+        <p class="lead">Nuestros productos</p>
+        <div class="card-deck">
+            <!-- Cartas bootstrap con los detalles de cada pc -->
+            <div class="card" *ngFor="let pc of shopModel.shopItems">
+                <app-stateless [pc]="pc"></app-stateless>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lista de artículos comprados -->
+    <ul class="list-group">
+        <li *ngFor="let boughtItem of boughtItems"
+        class="list-group-item">{{boughtItem.title}}</li>
+    </ul>
+</main>
